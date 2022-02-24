@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<RootNamespace>Org.PkiLib.Ef.PostgreSql</RootNamespace>
+		<LangVersion>latest</LangVersion>
+		<Nullable>enable</Nullable>
+		<Version>0.1.0</Version>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>PkiLib.Ef.PostgreSql</PackageId>
+		<PackageVersion>$(Version)</PackageVersion>
+		<Company>PkiLib.org</Company>
+		<Authors>Alexey Igin</Authors>
+		<Description>PostgreSql implementation for PkiLib.Ef</Description>
+		<Copyright>Copyright © 2022 Alexey Igin</Copyright>
+		<PackageProjectUrl>https://github.com/pkilib/PkiLib.Ef</PackageProjectUrl>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/pkilib/PkiLib.Ef.git</RepositoryUrl>
+		<!--<SourceRevisionId></SourceRevisionId>-->
+		<IncludeSourceRevisionInInformationalVersion>true</IncludeSourceRevisionInInformationalVersion>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="JetBrains.Annotations" Version="2021.3.0" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.0" />
+		<PackageReference Include="PkiLib.Common" Version="0.1.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\PkiLib.Ef\PkiLib.Ef.csproj" />
+	</ItemGroup>
+
+	<!-- https://stackoverflow.com/questions/15141338/embed-git-commit-hash-in-a-net-dll -->
+	<Target Name="SetSourceRevisionId" BeforeTargets="InitializeSourceControlInformation">
+		<Exec Command="git describe --long --always --dirty --exclude=* --abbrev=7" ConsoleToMSBuild="True" IgnoreExitCode="False">
+			<Output PropertyName="SourceRevisionId" TaskParameter="ConsoleOutput" />
+		</Exec>
+	</Target>
+
+</Project>

@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0199D441-F615-4525-8AA5-E871BDFCBD21}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0A6F99EE-916E-43CB-8545-0EA44CD65405}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PkiLib.Ef", "src\PkiLib.Ef\PkiLib.Ef.csproj", "{00759732-ABED-489F-AE1F-96211743C39F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PkiLib.Ef.PostgreSql", "src\PkiLib.Ef.PostgreSql\PkiLib.Ef.PostgreSql.csproj", "{97C59FB6-CEAE-40C1-AAC5-284E50135484}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PkiLib.Ef.Tests", "tests\PkiLib.Ef.Tests\PkiLib.Ef.Tests.csproj", "{7E234965-7447-4BF2-BFAF-99F6AE87F187}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00759732-ABED-489F-AE1F-96211743C39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00759732-ABED-489F-AE1F-96211743C39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00759732-ABED-489F-AE1F-96211743C39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00759732-ABED-489F-AE1F-96211743C39F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C59FB6-CEAE-40C1-AAC5-284E50135484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C59FB6-CEAE-40C1-AAC5-284E50135484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C59FB6-CEAE-40C1-AAC5-284E50135484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C59FB6-CEAE-40C1-AAC5-284E50135484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E234965-7447-4BF2-BFAF-99F6AE87F187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E234965-7447-4BF2-BFAF-99F6AE87F187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E234965-7447-4BF2-BFAF-99F6AE87F187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E234965-7447-4BF2-BFAF-99F6AE87F187}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{00759732-ABED-489F-AE1F-96211743C39F} = {0199D441-F615-4525-8AA5-E871BDFCBD21}
+		{97C59FB6-CEAE-40C1-AAC5-284E50135484} = {0199D441-F615-4525-8AA5-E871BDFCBD21}
+		{7E234965-7447-4BF2-BFAF-99F6AE87F187} = {0A6F99EE-916E-43CB-8545-0EA44CD65405}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B872E20-F91E-4812-8CBB-904C1186067F}
+	EndGlobalSection
+EndGlobal
