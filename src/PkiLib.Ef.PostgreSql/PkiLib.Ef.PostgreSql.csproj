@@ -1,11 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>netstandard2.0;net5.0</TargetFrameworks>
 		<RootNamespace>Org.PkiLib.Ef.PostgreSql</RootNamespace>
 		<LangVersion>latest</LangVersion>
 		<Nullable>enable</Nullable>
-		<Version>0.1.0</Version>
+		<Version>0.1.1</Version>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -26,8 +26,10 @@
 
 	<ItemGroup>
 		<PackageReference Include="JetBrains.Annotations" Version="2021.3.0" PrivateAssets="All" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.0" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" Condition="'$(TargetFramework)' == 'net5.0'" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.0.0" Condition="'$(TargetFramework)' == 'netstandard2.0'" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.17" Condition="'$(TargetFramework)' == 'net5.0'" />
 		<PackageReference Include="PkiLib.Common" Version="0.1.0" />
 	</ItemGroup>
 
